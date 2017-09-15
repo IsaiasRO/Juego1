@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	[SerializeField] float speed = 5;
+	private float speed = 5;
 	[SerializeField] UIManager uiManager;
 
 	void Update () {
-		if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetKey (KeyCode.W) && transform.Translate <7) {
 			transform.Translate (Vector2.up * Time.deltaTime * speed);
 		}
 		if (Input.GetKey (KeyCode.S)) {
