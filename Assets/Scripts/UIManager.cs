@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour {
 	void Start () {
 		
 	}
-	
 
 	public void UpdateCounter () {
 		counter += 1;
