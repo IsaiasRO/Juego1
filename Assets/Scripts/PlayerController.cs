@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 	private float speed = 7;
 	[SerializeField] UIManager uiManager;
 
+
 	void Update () {
 		if (Input.GetKey (KeyCode.W)&& transform.position.y <4) {
 			transform.Translate (Vector2.up * Time.deltaTime * speed);
