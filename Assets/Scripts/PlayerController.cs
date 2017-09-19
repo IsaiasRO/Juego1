@@ -7,16 +7,16 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] UIManager uiManager;
 
 	void Update () {
-		if (Input.GetKey (KeyCode.W)&& transform.position.y <3) {
+		if (Input.GetKey (KeyCode.W)&& transform.position.y <4) {
 			transform.Translate (Vector2.up * Time.deltaTime * speed);
 		}
-		if (Input.GetKey (KeyCode.S)&& transform.position.y >-3) {
+		if (Input.GetKey (KeyCode.S)&& transform.position.y >-3.5) {
 			transform.Translate (Vector2.down * Time.deltaTime * speed);
 		}
-		if (Input.GetKey (KeyCode.A)&& transform.position.x >-8) {
+		if (Input.GetKey (KeyCode.A)&& transform.position.x >-9.6) {
 			transform.Translate (Vector2.left * Time.deltaTime * speed);
 		}
-		if (Input.GetKey (KeyCode.D)&& transform.position.x <8) {
+		if (Input.GetKey (KeyCode.D)&& transform.position.x <9.5) {
 			transform.Translate (Vector2.right * Time.deltaTime * speed);
 		}
 	}
