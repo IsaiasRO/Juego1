@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 	[SerializeField] Text counterUI;
-	int counter = 0;
 	[SerializeField] Transform gatito;
+	int counter = 0;
 	Vector2 reset;
+
 
 	void Start () {
 		
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour {
 			print ("You Win");
 			gatito.transform.position = reset;
 			counterUI.text = "You win";
+
 		}
 	}
 }

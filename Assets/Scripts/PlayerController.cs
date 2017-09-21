@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	private float speed = 7;
+	public float speed = 7;
 	[SerializeField] UIManager uiManager;
 
 
+	void start (){
+
+	
+	}
 	void Update () {
+		
 		if (Input.GetKey (KeyCode.W)&& transform.position.y <4) {
 			transform.Translate (Vector2.up * Time.deltaTime * speed);
 		}
@@ -20,10 +25,13 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey (KeyCode.D)&& transform.position.x <9.5) {
 			transform.Translate (Vector2.right * Time.deltaTime * speed);
 		}
+
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		uiManager.UpdateCounter ();
 		Destroy (other.gameObject);
+
+
 
 	}
 }
