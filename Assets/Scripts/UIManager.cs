@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour {
 		if (counter == 10) {
 			print ("You Win");
 			gatito.transform.position = reset;
+			Time.timeScale = 0;
 			counterUI.text = "You win";
 
 		}
